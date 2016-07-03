@@ -32,7 +32,10 @@ function getImage(pageNumber) {
       console.log("image loaded");
       var photo = response.photos.photo[0];
       $("img.lighthouse").attr('src', flickrUrl(photo));
-      setTimeout(function() {getImage(pageNumber + 1)}, 1000);
+      pageNumber++;
+      setTimeout(function() {
+        getImage(pageNumber);
+      }, 1000);
     }
   });
 }
