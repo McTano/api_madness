@@ -15,7 +15,7 @@ $(function() {
         var results = response.RESULTS;
         $.each(results, function(i, result) {
           console.log(result.name);
-          $('div#results').append($('<p class="result">').text(result.name));
+          $('ul.results').append($('<li class="result">').text(result.name));
         });
       }
     });
